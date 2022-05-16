@@ -29,10 +29,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-        </plugins>
-    </build>
-    <build>
-        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -46,7 +42,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.sonatype.haven.HavenCli</mainClass>
+                                    <mainClass>org.example.DiscordBot</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -55,5 +51,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
