@@ -18,10 +18,13 @@ public class Commands extends ListenerAdapter {
             event.getChannel().sendMessage(event.getAuthor().getAvatarUrl()).queue();
         }
         else if(args[0].equalsIgnoreCase(prefix + "test2")){
-            event.getChannel().sendMessage("<@242075681046003743>").queue();
+            event.getChannel().sendMessage("<@970172253448843284>").queue();
             EmbedBuilder eb = new EmbedBuilder();
             eb.setColor(Color.red);
             eb.setTitle("At the Crib");
+            eb.setDescription("Partying with DJ POPCAT !FISHPOG");
+            eb.addField("DRINKING TEARS FROM SUSSYBOI","HOLD L THERE IS NO HOPE THERE IS NO CURVE",false);
+            eb.addField("QUOTE","RIP BOZO",false);
 
 
             event.getChannel().sendMessageEmbeds(eb.build()).queue();
