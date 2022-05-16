@@ -1,1 +1,1 @@
-worker: java -cp app.jar org.example.DiscordBot
+worker: java -cp botjavadiscord-1.0-SNAPSHOT.jar org.example.DiscordBot.MainClass
