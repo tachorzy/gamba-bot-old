@@ -30,5 +30,8 @@ public class Commands extends ListenerAdapter {
             event.getChannel().sendMessageEmbeds(eb.build()).queue();
             eb.clear();
         }
+        else if(args[0].equalsIgnoreCase(prefix + "fishpog")){
+            event.getChannel().sendMessage("https://c.tenor.com/p4MNhgEwIGwAAAAC/poggers-fish-lol.gif").queue();
+        }
     }
 }
