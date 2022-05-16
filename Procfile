@@ -1,1 +1,1 @@
-worker: java -jar target/botjavadiscord-1.0-SNAPSHOT.jar
+worker: java -cp app.jar org.example.DiscordBot
