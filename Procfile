@@ -1,1 +1,1 @@
-Woker: java $JAVA_OPTS -jar src/main/java/org.example/DiscordBot
+worker: java -jar DiscordBot.jar
