@@ -8,6 +8,13 @@
     <artifactId>botjavadiscord</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <archive>
+        <manifest>
+            <!-- give full qualified name of your main class-->
+            <mainClass>org.example.DiscordBot</mainClass>
+        </manifest>
+    </archive>
+</configuration>
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
