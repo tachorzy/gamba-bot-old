@@ -20,10 +20,9 @@ public class Commands extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event){
         String[] args = event.getMessage().getContentRaw().split(" ");
-
         if(args[0].charAt(0) == PREFIX){
-            switch(args[0]){
-                case "&fishpog":
+            switch(args[0].substring(1)){
+                case "fishpog":
                     try{
                         event.getChannel().sendMessage("https://c.tenor.com/p4MNhgEwIGwAAAAC/poggers-fish-lol.gif").queue();
                     }
@@ -31,7 +30,7 @@ public class Commands extends ListenerAdapter {
                         System.out.println(er);
                     }
                     break;
-                case "&annoy":
+                case "annoy":
                     try{
                         event.getChannel().sendMessage("<@694298455979327512>").queue();
                     }
