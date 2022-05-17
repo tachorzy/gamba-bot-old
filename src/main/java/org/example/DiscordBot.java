@@ -10,7 +10,7 @@ import javax.security.auth.login.LoginException;
 */
 public  class DiscordBot {
     public static void main(String[] args) throws LoginException {
-        JDA bot = JDABuilder.createDefault("OTc1ODM2ODQyODc4NDU1ODU4.GlnaDp.xm9gyf8auSeeHCEE1P2yZG9LiYOhk1bVQWbaHQ")
+        JDA bot = JDABuilder.createDefault("")
                 .setActivity(Activity.playing("Slots #Gamba Addiction"))
                 .build();
         System.out.println("Bot is up and running!");
