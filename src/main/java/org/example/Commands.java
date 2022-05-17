@@ -15,7 +15,7 @@ import java.awt.*;
     not sure if it leads into issues atm so far its fine
 */
 public class Commands extends ListenerAdapter {
-    public char PREFIX = '*';
+    public char PREFIX = '&';
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event){
@@ -23,7 +23,7 @@ public class Commands extends ListenerAdapter {
 
         if(args[0].charAt(0) == PREFIX){
             switch(args[0]){
-                case "*fishpog":
+                case "&fishpog":
                     try{
                         event.getChannel().sendMessage("https://c.tenor.com/p4MNhgEwIGwAAAAC/poggers-fish-lol.gif").queue();
                     }
@@ -31,9 +31,9 @@ public class Commands extends ListenerAdapter {
                         System.out.println(er);
                     }
                     break;
-                case "*annoy":
+                case "&annoy":
                     try{
-                        event.getChannel().sendMessage("<@107022278838996992>").queue();
+                        event.getChannel().sendMessage("<@694298455979327512>").queue();
                     }
                     catch(Exception er){
                         System.out.println(er);
