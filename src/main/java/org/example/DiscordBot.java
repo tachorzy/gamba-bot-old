@@ -9,9 +9,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /*
+    Purpose of Class:
     Create Default takes token and creates the bot
-    Event listener listen to user commands
+    Event listener listens to user commands
     Data about the database and the bot is obtained from env.txt file
+    To add your file, create a new object and pass it in the commands object below and modify the constructor
 */
 public  class DiscordBot {
     public static void main(String[] args) throws LoginException, FileNotFoundException {
@@ -28,7 +30,6 @@ public  class DiscordBot {
         while(fileReader.hasNextLine()){
             data = fileReader.nextLine();
             dataValue = data.substring((data.indexOf(':') + 1));
-            
             Name = data.substring(0,data.indexOf(':'));
 
             switch(Name){
@@ -49,13 +50,11 @@ public  class DiscordBot {
             }
         }
 
-        //connect the database and pass it to commands constructor
-        Database dbInfo = new Database(DBTOKEN,databaseName,collectionName);
-
+        //create the bot and pass the needed object to its constructor
         JDA bot = JDABuilder.createDefault(DISCORDTOKEN)
                 .setActivity(Activity.playing("Slots #Gamba Addiction"))
                 .build();
-        bot.addEventListener(new Commands(dbInfo));
+        bot.addEventListener(new Commands(new DataBase(DBTOKEN,databaseName,collectionName),new CoinFlip()));
         System.out.println("Bot is up and running!");
 
     }
