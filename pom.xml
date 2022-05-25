@@ -18,6 +18,11 @@
             <version>5.0.0-alpha.11</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.0.5</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
